@@ -10,6 +10,8 @@
 .imagem__topo{
   margin-top: 0px;
   margin-right: 80px;
+  height: auto;
+  width: auto;
 }
 table th{
   position: relative;
@@ -54,7 +56,7 @@ line-height: 37px;
 color: #000000;
 text-align: center;
 margin-bottom: 50px;
-margin-top:-300px;
+margin-top:-100px;
 }
 .subtitulo{
 font-family: Roboto;
@@ -267,6 +269,9 @@ table th td{
 .btn-salvar:hover{
   background-color: rgba(116, 93, 90, 0.829);
 }
+.classe__botton{
+  margin-bottom: -800px;
+}
 /*footer*/
 .footer_desc{
   background-color: #F1C40F;
@@ -323,56 +328,55 @@ table th td{
   }
 }
 
-/*** Classes usado no menu ****/
-.nav{    
-  
-  background-color: rgba(124, 124, 73, 0.442);
-  position: relative;
-  left: 0px;
-  top: 0px;
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(51, 51, 51, 0.653);
+  top: 0;
+  width: 100%;
+  position: absolute; 
+}
+@media(max-width:600px){
+  ul{
+  margin: 0;
+  padding: 0;
+  background-color: rgba(30, 29, 29, 0.918);
+  top: 70px;
+  width: 70%;
+  position: fixed; 
+  display: block;
+  }
+}
+li {
+  float: left;
 }
 
-.ul_menu_top{ 
-  width: 100%;    
-  padding: 10px;
-  transition: all .2s linear;
-  position: absolute;
-  margin-top: -550px;
-  background-color: rgba(255, 255, 255, 0.489);
-  
-}
-/*menu imagem*/
-
-/*fim menu imagem*/
-.ul_menu_top > li {
-  list-style: none;
-  display: inline-block;
-  padding: 20px;
-  width: 100px;
-  text-align: left;
-  margin-left: 12px;
-}
-.ul_menu_top li:hover{
-  background-color: blue;
-  padding: 20px;
-}
-
-
-
-.ul_menu_top li > a{
-  color: rgb(39, 21, 21);
-  font-size: 20px;
+li a {
+  display: block;
+  color: rgb(250, 249, 249);
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
+  font-size: 20px;
+}
+
+li a:hover {
+  background-color: rgb(59, 223, 105);
 }
 
 
 
+header li:first-child{
+  margin-left: 300px;
+}
 
 /*Menu hamburg (Toggle)*/
 .hamburg{
   display: none;
   width: 100%;
-  background-color: rgba(229, 210, 105, 0.884);
+  background-color: rgba(241, 196, 15, 0.714);
   padding: 15px;
 }
 
@@ -387,6 +391,10 @@ table th td{
   padding: 20px;
   float: left;
 }
+.classe_botao_inscricao{
+  padding:15px; background-color: #E74C3C; border-radius: 5px
+}
+
 
 .hamburg  > label > img{
   float: left;
@@ -396,36 +404,27 @@ table th td{
 
 .ul_menu_rigth{
   z-index: 999;
-  display: none;    
+  display: list-item;    
   width: 300px;
   height: 100%;
   position: absolute;
   transition: all .2s linear;
-  background: rgb(22, 20, 20);
   left: -300px;
   
 }
 
-.ul_menu_rigth > li{
+.ul_menu_rigth > li, a{
   list-style: none;
   display: block;
-  padding: 30px;
+  padding: 10px;
 }
-
-.ul_menu_rigth  > li:hover{
-  background-color:#60B752;
-}
-
 .ul_menu_rigth li > a{
-  color: #fff;
-  text-decoration: none;
+  color: white;
 }
-
-
 /*Enquanto menor que 990px*/
 @media (max-width:990px){
  
-  .ul_menu_top{
+  nav li{
       display: none;
   }
   .ul_menu_rigth{
@@ -435,9 +434,9 @@ table th td{
       width: 100%;
       display: flex;
       flex-direction: row;
-  }
+   }
   .img_humburg{
-      position: static;
+      position: fixed;
       height: 40px;
       width: 220px;
       margin: 10px; 
@@ -445,21 +444,21 @@ table th td{
       display: block;
       float: right;
       position: static;
-      margin-top: 15px;
+      margin-top: 250px;
       margin-right: 30px;
-  }
+  } 
   
   .ul_menu_top  > li{        
       display: block;
   }
   .ul_menu_top  > img{
       display: none;
-  }
+  } 
 }
 
 /*****************************/
 /*Enquanto menor que 420px*/
-@media (max-width:420px){
+@media (max-width:600px){
 
   .img_humburg{
       position: static;
@@ -487,7 +486,6 @@ table th td{
   display: block;
   z-index: 101;
   margin: 0 auto;
-  /* background-color: rgba(6, 6, 6, 0.6); */
   left: 0;
   right: 0;    
   top: 0;
@@ -500,7 +498,7 @@ table th td{
   display: flex;
   color: #000000;
   text-align: center;
-  top: 30px;
+  top: -500px;
   margin: 50px;    
   padding: 15px;
   margin-left:350px;
@@ -512,7 +510,7 @@ table th td{
   color: #000000;
   text-align: center;
   top: 15%;
-  margin: 30px;    
+  margin: -520px;    
   padding: 15px;
   margin-left:460px;
 }
@@ -522,7 +520,7 @@ table th td{
   display: flex;
   color: #000000;
   text-align: center;
-  top: 26%;
+  top: -330px;
   margin: 30px;    
   padding: 15px;
   margin-left:550px;
@@ -533,7 +531,7 @@ table th td{
   display: flex;
   color: #000000;;
   text-align: center;
-  top:33%;
+  top:-260px;
   margin: 30px;    
   padding: 15px;
   margin-left:420px;
@@ -546,7 +544,7 @@ table th td{
   display: flex;
   color: #FFFFFF;
   text-align: center;
-  top:43%;
+  top:-140px;
   margin: 30px;    
   padding: 15px;
   margin-left:570px;
@@ -566,15 +564,15 @@ table th td{
   .main_text{
     margin-left: -390px;
     padding: 10px;
-    font-size: 11px;
+    font-size: 10px;
     margin-top:-70px;
     margin-right: -49px;
   }
   .main_text_2{
-    margin-left: 30px;
+    margin-left: 5px;
     padding: 10px;
     font-size: 14px;
-    margin-top: 25px;
+    margin-top: -550px;
   }
   .main_text_3{
     margin-left: 60px;
@@ -582,6 +580,10 @@ table th td{
   .main_text_4{
     margin-left: 30px;
     font-size: 14px;
+  }
+  header img{
+    width: auto;
+    height: 100%;
   }
 }
 .main_download
